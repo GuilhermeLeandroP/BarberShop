@@ -1,0 +1,64 @@
+/* Estilos gerais */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #C0C8CB;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Logo */
+.logo {
+  display: block;
+  margin: 0 auto 20px;
+  width: 300px; /* Ajuste o tamanho conforme necessário */
+}
+
+/* Campos de entrada */
+.input-field {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  background-color: #333;
+  border: none;
+  color: #ffffff;
+  border-radius: 5px;
+}
+
+/* Botões */
+.btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #d4af37;
+  border: none;
+  color: #1a1a1a;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #b38f2e;
+}
+
+/* Mensagem de erro */
+.error-message {
+  color: #ff0000;
+  font-size: 14px;
+}
+
+/* Links */
+.link {
+  color: #d4af37;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
