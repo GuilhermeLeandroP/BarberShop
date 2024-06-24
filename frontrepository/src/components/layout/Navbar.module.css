@@ -1,0 +1,72 @@
+/* Navbar.module.css */
+
+/* Importando a fonte Montserrat do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+/* Estilo geral para a navbar */
+.navbar {
+    width: 100%;
+    background-color: #1c1c1c;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    font-family: 'Montserrat', sans-serif;
+    position: fixed; /* Fixar o navbar no topo */
+    top: 0; /* Alinhar no topo */
+    z-index: 1000; /* Garantindo que fique acima do conteúdo do body */
+}
+
+/* Estilo para a logo */
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+/* Contêiner para os itens da navbar */
+.navItems {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    margin-left: 20px;
+}
+
+/* Estilo para os itens da navbar */
+.navItem {
+    color: #f0f0f0;
+    margin-right: 20px;
+    padding: 10px 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* Mudança de cor ao passar o mouse */
+.navItem:hover {
+    background-color: #444;
+    color: #fff;
+    border-radius: 4px;
+}
+
+/* Responsividade para dispositivos móveis */
+@media screen and (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navItems {
+        flex-direction: column;
+        width: 100%;
+        margin-left: 0;
+    }
+    .navItem {
+        width: 100%;
+        text-align: left;
+        margin: 0;
+        padding: 10px 20px;
+    }
+}

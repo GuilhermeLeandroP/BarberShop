@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../../imagens/logo.png';
+import logo from '../../imagens/logo3.png';
 import styles from './Login.module.css';
 import { Link } from 'react-router-dom';
 

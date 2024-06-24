@@ -1,7 +1,7 @@
 /* Estilos gerais */
 body {
   font-family: Arial, sans-serif;
-  background-color: #C0C8CB;
+  background-color: black;
   color: #ffffff;
   margin: 0;
   padding: 0;
@@ -18,6 +18,7 @@ body {
 .logo {
   display: block;
   margin: 0 auto 20px;
+  border-radius: 60px;
   width: 300px; /* Ajuste o tamanho conforme necessário */
 }
 

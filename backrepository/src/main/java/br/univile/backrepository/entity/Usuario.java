@@ -35,6 +35,9 @@ public class Usuario {
     @Column(length = 1000, nullable = false)
     private String cidade;
 
+    @Column(length = 100, nullable = false)
+    private String senha;
+
     public long getId() {
         return id;
     }
@@ -81,5 +84,13 @@ public class Usuario {
 
     public void setCidade(String cidade) {
         this.cidade = cidade;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
     }
 }
