@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from '../../imagens/logo3.png';
 import styles from './Login.module.css';
 import { Link } from 'react-router-dom';
 
@@ -19,7 +18,8 @@ function Cadastro() {
             estado: estado,
             cidade: cidade,
             dataNascimento: dataNascimento,
-            senha: senha
+            senha: senha,
+            type: "client",
         };
 
         fetch("http://localhost:8080/usuario", {
@@ -31,6 +31,7 @@ function Cadastro() {
         }).then(response => {
             if (response.ok) {
                 alert('Usuário cadastrado com sucesso!');
+                window.location.reload();
             } else {
                 alert('Erro ao cadastrar usuário.');
             }
@@ -41,15 +42,22 @@ function Cadastro() {
 
     return (
         <div className={styles.container}>
-            <img src={logo} alt="logo" className={styles.logo} />
-            <input type="text" placeholder="Nome" className={styles['input-field']} id='nome'/>
-            <input type="email" placeholder="E-mail" className={styles['input-field']} id='email'/>
-            <input type="text" placeholder="Estado" className={styles['input-field']} id='estado'/>
-            <input type="text" placeholder="Cidade" className={styles['input-field']} id='cidade'/>
-            <input type="date" placeholder="Data de nascimento" className={styles['input-field']} id='date'/>
-            <input type="password" placeholder="Senha" className={styles['input-field']} id='senha'/>
-            <button type="button" className={styles.btn} onClick={CadastrarUsuario}>Cadastrar</button>
-            <Link to="/" className={styles.link}><p>Login</p></Link>
+            <div className={styles.formContainer}>
+                <p className={styles.welcome}>Welcome</p>
+                <p className={styles.logoName}>• Barber Shop •</p>
+                <p className={styles.welcome}>Haircuts & Shaves</p>
+                <input type="text" placeholder="Nome" className={styles.inputField} id='nome'/>
+                <input type="email" placeholder="E-mail" className={styles.inputField} id='email'/>
+                <input type="text" placeholder="Estado" className={styles.inputField} id='estado'/>
+                <input type="text" placeholder="Cidade" className={styles.inputField} id='cidade'/>
+                <input type="date" placeholder="Data de nascimento" className={styles.inputField} id='date'/>
+                <input type="password" placeholder="Senha" className={styles.inputField} id='senha'/>
+                <button type="button" className={styles.btn} onClick={CadastrarUsuario}>Cadastrar</button>
+                <Link to="/" className={styles.link}><p>Login</p></Link>
+            </div>
+            <div className={styles.imageContainer}>
+                <img src="https://barthausbarbearia.com.br/wp-content/uploads/2017/06/barthausbarbearia.com_.br-imagem-topo-2.jpg" alt="Background" className={styles.backgroundImage} />
+            </div>
         </div>
     );
 }

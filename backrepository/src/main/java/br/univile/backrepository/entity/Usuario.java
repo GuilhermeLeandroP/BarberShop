@@ -26,7 +26,7 @@ public class Usuario {
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date dataNascimento;
 
-    @Column(length = 1000, nullable = false)
+    @Column(nullable = false, unique = true)
     private String email;
 
     @Column(length = 1000, nullable = false)
@@ -37,6 +37,9 @@ public class Usuario {
 
     @Column(length = 100, nullable = false)
     private String senha;
+
+    @Column(length = 100, nullable = false)
+    private String type;
 
     public long getId() {
         return id;
@@ -92,5 +95,13 @@ public class Usuario {
 
     public void setSenha(String senha) {
         this.senha = senha;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 }

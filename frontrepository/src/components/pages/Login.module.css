@@ -1,65 +1,75 @@
-/* Estilos gerais */
-body {
-  font-family: Arial, sans-serif;
-  background-color: black;
-  color: #ffffff;
-  margin: 0;
-  padding: 0;
+.container {
+  display: flex;
+  height: 100vh;
 }
 
-.container {
-  max-width: 400px;
-  margin: 0 auto;
+.formContainer {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #1c1c1e;
+  color: white;
   padding: 20px;
+}
+
+.link {
+  color: white;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.inputField {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.btn {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  background-color: #fca311;
+  color: #1c1c1e;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.imageContainer {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.backgroundImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.welcome {
+  color: #ada4a4; /* Cor do texto "Welcome" */
+  font-size: 16px; /* Tamanho da fonte */
   text-align: center;
 }
 
-/* Logo */
-.logo {
-  display: block;
-  margin: 0 auto 20px;
-  border-radius: 60px;
-  width: 300px; /* Ajuste o tamanho conforme necessário */
-}
-
-/* Campos de entrada */
-.input-field {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  background-color: #333;
-  border: none;
-  color: #ffffff;
-  border-radius: 5px;
-}
-
-/* Botões */
-.btn {
-  width: 100%;
-  padding: 10px;
-  background-color: #d4af37;
-  border: none;
-  color: #1a1a1a;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.btn:hover {
-  background-color: #b38f2e;
-}
-
-/* Mensagem de erro */
-.error-message {
-  color: #ff0000;
-  font-size: 14px;
-}
-
-/* Links */
-.link {
-  color: #d4af37;
-  text-decoration: none;
-}
-
-.link:hover {
-  text-decoration: underline;
+.logoName {
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+  margin: 0px;
+  padding: 3px;
+  border-top: solid #fca311 2px; /* Adicione uma borda branca de 4px */
+  border-bottom: solid #fca311 2px; /* Adicione uma borda branca de 4px */
 }
