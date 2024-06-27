@@ -1,21 +1,26 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { AuthProvider } from './context/AuthProvider';
+import Home from './components/pages/Home';
 import Login from './components/pages/Login';
 import Cadastro from './components/pages/Cadastro';
-import Home from './components/pages/Home';
 
 function App() {
-  return (
-    <Router>
-      <div className="App">
-        <Routes>
-          <Route path="/" element={<Login />} />
-          <Route path="/Cadastro" element={<Cadastro />} />
-          <Route path="/Home" element={<Home />} />
-        </Routes>
-      </div>
-    </Router>
-  );
+    return (
+
+            <Router>
+      <AuthProvider>
+
+                <Routes>
+                    <Route path="/home" element={<Home />} />
+                    <Route path="/" element={<Login />} />
+                    <Route path="/cadastro" element={<Cadastro />} />
+                </Routes>
+                </AuthProvider>
+
+            </Router>
+
+    );
 }
 
 export default App;

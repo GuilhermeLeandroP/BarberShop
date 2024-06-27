@@ -2,8 +2,10 @@ package br.univile.backrepository.service;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import br.univile.backrepository.component.JwtTokenProvider;
 import br.univile.backrepository.entity.Usuario;
 import br.univile.backrepository.repository.UsuarioRepository;
 
@@ -13,6 +15,9 @@ public class UsuarioService {
     
     private UsuarioRepository usuarioRepository;
 
+    @Autowired
+    private JwtTokenProvider jwtTokenProvider;
+    
     public UsuarioService(UsuarioRepository usuarioRepository){
         this.usuarioRepository = usuarioRepository;
     }
@@ -41,6 +46,20 @@ public class UsuarioService {
             throw new RuntimeException("Usuário já cadastrado no sistema!");
         }
         
+
+    }
+
+    public String authenticate(String email, String password){
+
+        Usuario usuario = usuarioRepository.findByEmail(email);
+        long id = usuario.getId();
+        String type = usuario.getType();
+        
+        if(usuario != null && usuario.getSenha().equals(password)){
+            return jwtTokenProvider.generateJwtToken(email, id, type); 
+        }else{
+            throw new RuntimeException("E-mail e senha informados não conferem");
+        }
 
     }
 

@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Navbar from '../layout/Navbar';
 import styles from './Home.module.css';
+import {getToken} from "../../Utils"
 
 function Home() {
+    useEffect(() => {
+            const data = getToken();
+
+            console.log(data);
+        
+    }, []);
+
     return (
         <div>
             <Navbar />

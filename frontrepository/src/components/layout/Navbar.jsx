@@ -1,8 +1,10 @@
 import React from 'react';
 import logo from '../../imagens/logo3.png';
 import styles from './Navbar.module.css';
+import {getToken} from "../../Utils"
 
 function Navbar() {
+    const token = getToken();
     return (
         <div className={styles.navbar}>
             <img src={logo} alt="logo" className={styles.logo}/>

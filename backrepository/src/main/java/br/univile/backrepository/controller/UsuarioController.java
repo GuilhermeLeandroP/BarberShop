@@ -1,6 +1,7 @@
 package br.univile.backrepository.controller;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -72,6 +73,24 @@ public class UsuarioController {
             return ResponseEntity.status(HttpStatus.I_AM_A_TEAPOT).body(e.getMessage());
         }
 
+    }
+    
+    @CrossOrigin
+    @PostMapping("/login")
+    public ResponseEntity<String> authenticate(@RequestBody Map<String, String> credentials){
+
+        String email = credentials.get("email");
+        String senha = credentials.get("senha");
+
+        try{
+
+            String token = usuarioService.authenticate(email, senha);
+            return ResponseEntity.ok(token);
+
+        }catch (RuntimeException e) {
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(e.getMessage());
+        }
+        
     }
 
 }
