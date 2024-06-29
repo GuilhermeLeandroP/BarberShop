@@ -41,6 +41,9 @@ public class Usuario {
     @Column(length = 100, nullable = false)
     private String type;
 
+    @Column
+    private String foto;
+
     public long getId() {
         return id;
     }
@@ -103,5 +106,13 @@ public class Usuario {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    public String getFoto() {
+        return foto;
+    }
+
+    public void setFoto(String foto) {
+        this.foto = foto;
     }
 }

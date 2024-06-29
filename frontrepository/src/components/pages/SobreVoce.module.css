@@ -1,0 +1,71 @@
+/* SobreVoce.module.css */
+
+.formContainer {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 20px;
+    padding-top: 200px;
+  }
+
+.inputField {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    color: #28292E;
+}
+
+.imageContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.userImage {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.fileInput {
+  display: none;
+}
+
+.uploadButton {
+  border: none;
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+
+.uploadButton::before {
+  content: '📷'; /* Simbolo de camera */
+  font-size: 20px;
+}
+
+.btn {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    background-color: #fca311;
+    color: #1c1c1e;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }

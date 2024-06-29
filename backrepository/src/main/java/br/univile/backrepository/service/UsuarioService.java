@@ -5,10 +5,9 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import br.univile.backrepository.component.JwtTokenProvider;
 import br.univile.backrepository.entity.Usuario;
 import br.univile.backrepository.repository.UsuarioRepository;
-
+import br.univile.backrepository.util.JwtTokenProvider;
 
 @Service
 public class UsuarioService {
@@ -63,9 +62,8 @@ public class UsuarioService {
 
     }
 
-    public String updateUsuario(Usuario usuario){
+    public String updateUsuario(long id, Usuario usuario){
 
-        long id = usuario.getId();
         Usuario usuarioDB = usuarioRepository.findById(id);
 
         if(usuarioDB != null){
@@ -75,6 +73,7 @@ public class UsuarioService {
             usuarioDB.setCidade(usuario.getCidade());
             usuarioDB.setEstado(usuario.getEstado());
             usuarioDB.setSenha(usuario.getSenha());
+            // usuarioDB.setFoto(usuario.getFoto());
             usuarioRepository.save(usuarioDB);
             return "Usuário atualizado com sucesso";
         }else{

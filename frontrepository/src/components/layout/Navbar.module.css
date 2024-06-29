@@ -1,12 +1,10 @@
-/* Navbar.module.css */
-
 /* Importando a fonte Montserrat do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
 
 /* Estilo geral para a navbar */
 .navbar {
     width: 100%;
-    background-color: #1c1c1c;
+    background-color: #28292E;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -18,10 +16,30 @@
     z-index: 1000; /* Garantindo que fique acima do conteúdo do body */
 }
 
+.welcome {
+    color: #ada4a4; /* Cor do texto "Welcome" */
+    font-size: 14px; /* Tamanho da fonte ajustado */
+    text-align: center;
+}
+
+.logoName {
+    color: white;
+    font-size: 24px; /* Tamanho da fonte ajustado */
+    text-align: center;
+    font-weight: bold;
+    margin: 0;
+    padding: 2px;
+    border-top: solid #fca311 2px;
+    border-bottom: solid #fca311 2px;
+}
+
 /* Estilo para a logo */
-.logo {
-    width: 100px;
+.logoContainer {
+    /* width: 80px; Dimensão ajustada */
     height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Contêiner para os itens da navbar */

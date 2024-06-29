@@ -61,12 +61,12 @@ public class UsuarioController {
     }
 
     @CrossOrigin
-    @PutMapping("/atualizar")
-    public ResponseEntity<String> updateUsuario(@RequestBody Usuario request){
+    @PutMapping("/atualizar/{id}")
+    public ResponseEntity<String> updateUsuario(@PathVariable("id") long id, @RequestBody Usuario request){
         
         try{
 
-            String response = usuarioService.updateUsuario(request);
+            String response = usuarioService.updateUsuario(id, request);
             return ResponseEntity.ok(response);
 
         }catch (RuntimeException e) {

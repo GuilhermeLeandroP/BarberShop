@@ -30,11 +30,12 @@ public class Startup {
 
         var admin = new Usuario();
         admin.setNome("Admin");
+        admin.setFoto("https://t3.ftcdn.net/jpg/02/01/98/38/360_F_201983821_GxMwXoT1dzcAeuZtBLVXvEDmWZ0ee3Rl.webp");
         admin.setCidade("Joinville");
         admin.setEstado("Santa Catarina");
         admin.setDataNascimento(new Date(2003,04,9));
-        admin.setSenha("admin@123");
-        admin.setEmail("admin@admin.com");
+        admin.setSenha("admin");
+        admin.setEmail("admin");
         admin.setType("Admin");
         service.addUsuario(admin);
     }

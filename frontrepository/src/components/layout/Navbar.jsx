@@ -1,18 +1,23 @@
 import React from 'react';
 import logo from '../../imagens/logo3.png';
 import styles from './Navbar.module.css';
-import {getToken} from "../../Utils"
+import { getToken } from "../../Utils"
+import { Link } from 'react-router-dom';
 
 function Navbar() {
     const token = getToken();
     return (
         <div className={styles.navbar}>
-            <img src={logo} alt="logo" className={styles.logo}/>
+            <div className={styles.logoContainer}>
+                <p className={styles.welcome}>Welcome</p>
+                <p className={styles.logoName}>• Barber Shop •</p>
+                <p className={styles.welcome}>Haircuts & Shaves</p>
+            </div>
             <div className={styles.navItems}>
-                <div className={styles.navItem}>Home</div>
+                {/* <Link> <div className={styles.navItem}>Home</div></Link> */}
                 <div className={styles.navItem}>Agendar</div>
-                <div className={styles.navItem}>Barbeiros</div>
-                <div className={styles.navItem}>Suas informações</div>
+                <Link to="/barbeiros"><div className={styles.navItem}>Barbeiros</div></Link>
+                <Link to="/sobreVoce"><div className={styles.navItem}>Sobre Você</div></Link>
             </div>
         </div>
     );

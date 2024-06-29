@@ -1,4 +1,4 @@
-package br.univile.backrepository.component;
+package br.univile.backrepository.util;
 
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -33,7 +33,7 @@ public class JwtTokenProvider {
                 .setExpiration(new Date(new Date().getTime() + jwtExpirationMs))
                 .signWith(key, SignatureAlgorithm.HS512)
                 .compact();
-
+ 
     }
     
 }
