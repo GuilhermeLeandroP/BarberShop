@@ -15,7 +15,7 @@ function Navbar() {
             </div>
             <div className={styles.navItems}>
                 {/* <Link> <div className={styles.navItem}>Home</div></Link> */}
-                <div className={styles.navItem}>Agendar</div>
+                <Link to="/selectBarber"><div className={styles.navItem}>Agendar</div></Link>
                 <Link to="/barbeiros"><div className={styles.navItem}>Barbeiros</div></Link>
                 <Link to="/sobreVoce"><div className={styles.navItem}>Sobre Você</div></Link>
             </div>

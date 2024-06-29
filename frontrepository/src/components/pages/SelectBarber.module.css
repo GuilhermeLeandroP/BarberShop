@@ -1,0 +1,94 @@
+/* SelectBarber.module.css */
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    padding-top: 152px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.selectBarber {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    appearance: none;
+    outline: none;
+}
+
+.calendarContainer {
+    margin-bottom: 20px;
+    color: white;
+}
+
+.selectDate {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    appearance: none;
+    outline: none;
+}
+
+h3 {
+    color: white;
+}
+.timeContainer {
+    margin-bottom: 20px;
+    color: white;
+}
+
+.times {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.timeButton {
+    padding: 10px 20px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.timeButton:hover {
+    background-color: #0056b3;
+}
+
+.selectedTime {
+    padding: 10px 20px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    background-color: #fca311;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.scheduleButton {
+    padding: 12px 24px;
+    font-size: 16px;
+    background-color: #fca311;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.scheduleButton:hover {
+    background-color: #c48520;
+}

@@ -6,6 +6,8 @@ import Login from './components/pages/Login';
 import Cadastro from './components/pages/Cadastro';
 import SobreVoce from './components/pages/SobreVoce';
 import Barbeiros from './components/pages/Barbeiros';
+import Agendar from './components/pages/Agendar';
+import SelectBarber from './components/pages/SelectBarber';
 
 function App() {
     return (
@@ -19,6 +21,8 @@ function App() {
                     <Route path="/" element={<Login />} />
                     <Route path="/cadastro" element={<Cadastro />} />
                     <Route path="/sobreVoce" element={<SobreVoce />} />
+                    <Route path="/agendar" element={<Agendar />} />
+                    <Route path="/selectBarber" element={<SelectBarber />} />
                 </Routes>
                 </AuthProvider>
 

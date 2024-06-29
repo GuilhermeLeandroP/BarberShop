@@ -21,7 +21,7 @@ function Login() {
             if (response.ok) {
                 const token = await response.text();
                 localStorage.setItem('token', token);
-                navigate('/Home');
+                navigate('/selectBarber');
             } else {
                 const errorMessage = await response.text();
                 setError(errorMessage);
