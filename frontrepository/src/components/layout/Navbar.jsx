@@ -17,7 +17,9 @@ function Navbar() {
                 {/* <Link> <div className={styles.navItem}>Home</div></Link> */}
                 <Link to="/selectBarber"><div className={styles.navItem}>Agendar</div></Link>
                 <Link to="/barbeiros"><div className={styles.navItem}>Barbeiros</div></Link>
+                <Link to="/seusAgendamentos"><div className={styles.navItem}>Seus Agendamentos</div></Link>
                 <Link to="/sobreVoce"><div className={styles.navItem}>Sobre Você</div></Link>
+                <Link to="/"><div className={styles.navItem}>&#x21AA; Sair</div></Link>
             </div>
         </div>
     );

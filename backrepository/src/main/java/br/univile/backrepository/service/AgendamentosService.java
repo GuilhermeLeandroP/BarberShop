@@ -25,7 +25,20 @@ public class AgendamentosService {
         repository.delete(barbeiro);
     }
 
+    public boolean isConflictingAgendamento(Agendamentos agendamentos) {
+        List<Agendamentos> existingAgendamentos = repository.findByBarbeirosIdAndDataAndHora(
+            agendamentos.getBarbeiros().getId(),
+            agendamentos.getData(),
+            agendamentos.getHora()
+        );
+        return !existingAgendamentos.isEmpty();
+    }
+
     public List<Agendamentos> getAll() {
         return repository.findAll();
+    }
+
+    public List<Agendamentos> findByUsuarioId(long id) {
+        return repository.findByUsuarioId(id);
     }
 }

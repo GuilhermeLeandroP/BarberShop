@@ -109,6 +109,9 @@ export default function SelectBarber() {
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
+            } else if(response.CONFLIT) {
+                alert("O barbeiro já tem um agendamento nesse mesmo horário e data");
+                window.location.reload();
             }
             return response.json();
         })
@@ -124,16 +127,6 @@ export default function SelectBarber() {
             console.error('Houve um erro ao agendar:', error);
             alert('Houve um erro ao agendar. Por favor, tente novamente mais tarde.');
         });
-    };
-
-    const getNext30Days = () => {
-        const today = new Date();
-        const days = [];
-        for (let i = 0; i < 30; i++) {
-            const nextDay = addDays(today, i);
-            days.push(nextDay);
-        }
-        return days;
     };
 
     return (

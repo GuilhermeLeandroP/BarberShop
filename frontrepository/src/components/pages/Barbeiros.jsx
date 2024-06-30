@@ -95,8 +95,8 @@ export default function Barbeiros() {
         <>
             <Navbar />
             <div className={styles.container}>
-                <button className={styles.incluir} onClick={handleAdd}>+</button>
                 <h1 className={styles.title}>Lista de Barbeiros</h1>
+                <button className={styles.incluir} onClick={handleAdd}>+</button>
                 <div className={styles.list}>
                     {barbeiros.map(barbeiro => (
                         <div key={barbeiro.id} className={styles.barbeiroCard}>

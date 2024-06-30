@@ -16,6 +16,12 @@
     z-index: 1000; /* Garantindo que fique acima do conteúdo do body */
 }
 
+.logout {
+    background-color: white;
+    border-radius: 15px;
+    margin-left: 5%;
+}
+
 .welcome {
     color: #ada4a4; /* Cor do texto "Welcome" */
     font-size: 14px; /* Tamanho da fonte ajustado */
@@ -61,6 +67,7 @@
     font-size: 16px;
     font-weight: 600;
     text-transform: uppercase;
+    text-decoration: none; /* Remove o sublinhado dos links */
 }
 
 /* Mudança de cor ao passar o mouse */

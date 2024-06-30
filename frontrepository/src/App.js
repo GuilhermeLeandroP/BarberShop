@@ -8,6 +8,7 @@ import SobreVoce from './components/pages/SobreVoce';
 import Barbeiros from './components/pages/Barbeiros';
 import Agendar from './components/pages/Agendar';
 import SelectBarber from './components/pages/SelectBarber';
+import SeusAgendamentos from './components/pages/SeusAgendamentos';
 
 function App() {
     return (
@@ -23,6 +24,7 @@ function App() {
                     <Route path="/sobreVoce" element={<SobreVoce />} />
                     <Route path="/agendar" element={<Agendar />} />
                     <Route path="/selectBarber" element={<SelectBarber />} />
+                    <Route path="/seusAgendamentos" element={<SeusAgendamentos />} />
                 </Routes>
                 </AuthProvider>
 
